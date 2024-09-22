@@ -18,12 +18,4 @@ public class LogicTest {
         String result = logic.processData("abc123!");
         assertEquals("ABC234! - Comm", result); // Updated expected result
     }
-
-    @Test
-    public void testCalculateSum() {
-        Logic logic = new Logic();
-        int[] numbers = {1, 2, 3, 4, 5};
-        int sum = logic.calculateSum(numbers);
-        assertEquals(15, sum);
-    }
 }

@@ -13,6 +13,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>maven_logic</artifactId>
 	<version>${build_time}</version>
+	<packaging>jar</packaging> <!-- 追加 -->
 
 	<name>maven_logic</name>
 	<description>Demo project for Spring Boot</description>
@@ -66,10 +67,34 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.example.maven_web.Application</mainClass> <!-- 追加 -->
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
