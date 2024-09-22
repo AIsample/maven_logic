@@ -1,6 +1,6 @@
-package com.example.maven_logic;
+package com.example.service;
 
-import com.example.maven_common.StringUtil;
+import com.example.StringUtil;
 
 /**
  * Logicクラスは、文字列の処理を行うユーティリティクラスです。

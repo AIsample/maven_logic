@@ -12,7 +12,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>maven_logic</artifactId>
-	<version>${build_time}</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging> <!-- 追加 -->
 
 	<name>maven_logic</name>
@@ -21,40 +21,11 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>github_releases</id>
-			<name>GitHub Packages releases</name>
-			<url>https://maven.pkg.github.com/coding-sample/maven_common/releases</url>
-		</repository>
-		<repository>
-			<id>github_snapshots</id>
-			<name>GitHub Packages snapshots</name>
-			<url>https://maven.pkg.github.com/coding-sample/maven_common/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/coding-sample/maven_logic/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/coding-sample/maven_logic/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.example</groupId>
 			<artifactId>maven_common</artifactId>
-			<version>${build_time}</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
@@ -85,17 +56,5 @@
 			<version>2.2</version>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>com.example.maven_web.Application</mainClass> <!-- 追加 -->
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

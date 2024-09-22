@@ -1,6 +1,9 @@
 package com.example.maven_logic;
 
 import org.junit.jupiter.api.Test;
+
+import com.example.service.Logic;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LogicTest {
